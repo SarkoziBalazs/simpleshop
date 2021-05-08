@@ -2,10 +2,8 @@
 
 namespace Database\Factories;
 
-use App\Models\Product;
 use App\Models\ProductPicture;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 
 class ProductPictureFactory extends Factory
 {
@@ -23,8 +21,11 @@ class ProductPictureFactory extends Factory
      */
     public function definition()
     {
+        $color = str_replace("#", "",$this->faker->hexColor);
+        $text = join(" ",$this->faker->words());
+
         return [
-            "url" => $this->faker->imageUrl()
+            "url" => "/placeholder.php?size=640x480&bg=$color&text=$text",
         ];
     }
 }

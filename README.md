@@ -39,9 +39,15 @@ Run database seeder
 php artisan db:seed
 ```
 
+Build the assets
+
+```
+npm run dev
+```
+
 Start web server
 ```
-php artisan server
+php artisan serve
 ```
 
 Site is up and running on <a href="http://localhost:8000">localhost:8000</a>

@@ -4,7 +4,6 @@ namespace Database\Factories;
 
 use App\Models\Product;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 
 class ProductFactory extends Factory
 {
@@ -22,6 +21,9 @@ class ProductFactory extends Factory
      */
     public function definition()
     {
+        $color = str_replace("#", "",$this->faker->hexColor);
+        $text = join(" ",$this->faker->words());
+
         $data = [
             "name" => implode(" ",$this->faker->words(3)),
             "price" => $this->faker->randomFloat(2,10,300),
@@ -29,7 +31,7 @@ class ProductFactory extends Factory
             "discount" => $this->faker->boolean(),
             "slug" => $this->faker->slug(),
             "freeShipping" => $this->faker->boolean(),
-            "image" => $this->faker->imageUrl(),
+            "image" => "/placeholder.php?size=640x480&bg=$color&text=$text",
             "status" => $this->faker->randomElement(["In stock","Preorder","Order"])
         ];
 

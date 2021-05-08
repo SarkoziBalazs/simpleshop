@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
+    "name": "sarkozibalazs/simpleshop",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Simple shop is a demo/prototype ecommerce engine",
     "keywords": [
         "framework",
         "laravel"
@@ -17,7 +17,17 @@
         "laravel/jetstream": "^1.0",
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.0",
-        "laravel/ui": "^2.2"
+        "laravel/ui": "^2.2",
+        "ext-gd": "*",
+        "ext-json": "*",
+        "ext-bcmath": "*",
+        "ext-pdo": "*",
+        "ext-ctype": "*",
+        "ext-fileinfo": "*",
+        "ext-mbstring": "*",
+        "ext-openssl": "*",
+        "ext-tokenizer": "*",
+        "ext-xml" : "*"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",
